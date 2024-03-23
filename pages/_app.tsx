@@ -1,8 +1,10 @@
 import type { AppProps } from "next/app";
+import Head from 'next/head'
 import CssBaseline from '@mui/material/CssBaseline'
 import { AppCacheProvider } from '@mui/material-nextjs/v14-pagesRouter'
-import Head from 'next/head'
 import NextNProgress from 'nextjs-progressbar'
+
+import Providers from '@/components/providers'
 
 
 export default function App(props: AppProps) {
@@ -19,8 +21,10 @@ export default function App(props: AppProps) {
         height={3}
         options={{ showSpinner: false }}
       />
-      <CssBaseline />
-      <Component {...pageProps} />
+      <Providers>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </Providers>
     </AppCacheProvider >
   )
 }
