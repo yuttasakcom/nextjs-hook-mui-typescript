@@ -21,7 +21,7 @@ export default function App(props: AppProps) {
         height={3}
         options={{ showSpinner: false }}
       />
-      <Providers>
+      <Providers {...pageProps}>
         <CssBaseline />
         <Component {...pageProps} />
       </Providers>
