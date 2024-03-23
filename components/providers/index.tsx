@@ -2,7 +2,7 @@
 
 interface Props {
     components: Array<[React.ComponentType<any>, Record<string, any>] | React.ComponentType<any>>
-    children: React.ReactNode;
+    children: React.ReactNode
 }
 
 export default function Providers({ children }: { children: React.ReactNode }) {
